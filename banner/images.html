@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>배너제작</title>
+   <style>
+      *{padding: 0;margin: 0;}
+       body{overflow-x: hidden;}
+       .wrap{position: relative;top:0; left: 0;}
+      .box{position: absolute;overflow: hidden;}
+        .title{font-size:20px; color:rgba(0,0,0,0); position: absolute;bottom: 0; transition:1s;
+          background-image: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.7));display: flex;align-items: center;justify-content: center; cursor: pointer;}
+       .box:hover .title{background-color:rgba(0,0,0,0.5);color:white;}
+        .box>img{margin:auto; display: block; height:100%;}
+   </style>
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script>
+   $(document).ready(function(){
+        title=['치과 로고','중국 박람회','추석 배너','할로윈데이','메리 크리스마스','치아미백제1','치아미백제2','구강패치 패키지1','구강패치 패키지2','찌꺼기가글 패키지','카드할인 배너','before & after','가글 POP','미백제 POP','미백세트 POP','시린이치약 POP','미백치약 POP','아이콘 제작','SNS쿨팝','SNS치아미백제1','SNS치아미백제2','SNS치약배너','SNS찌꺼기가글1','SNS찌꺼기가글2','SNS찌꺼기가글3','SNS찌꺼기가글4','SNS가글1','SNS가글2','SNS가글3','SNS가글4','봄맞이 이벤트1','봄맞이 이벤트2']
+      var timer;
+      aa();
+      function aa(){
+         win_size=$(window).width();
+         if(win_size>1600){
+            col=7
+         }else if(win_size<=1600 && win_size>1200){
+            col=5
+         }else if(win_size<=1200 && win_size>800){
+            col=3
+         }else if(win_size<=800 && win_size>=450){
+             col=2
+         }else if(win_size<450){
+             col=1
+         }
+      /*col=10*/
+      space=10
+      box=$('.box');
+      box_size=(win_size-(space*col+space))/col
+      box.width(box_size);
+      box.height(box_size);
+      
+      box.each(function(){
+         _index=$(this).index();
+            $(this).append('<img>');
+            $(this).find('img').attr('src','imgs/images'+_index+'.jpg');
+            $(this).find('.title').text(title[_index]);
+            $('.title').width(box_size);
+            title_h=$(this).width()/5
+            $('.title').height(title_h);
+            
+         column=_index%col
+         row=Math.floor(_index/col);
+         //console.log(row)
+         _left=(column*box_size)+(column*space)+space
+         _top=(row*box_size)+(row*space)+space
+         $(this).stop().animate({left:_left,top:_top},500);   
+          
+      });
+   }
+      $(window).resize(function(){
+         clearTimeout(timer);
+         timer=setTimeout(aa,500);
+      });
+   });
+   </script>
+</head>
+<body>
+      <div class="wrap">
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+           <div class="box">    
+          <div class="title"></div>
+          </div>
+           <div class="box">    
+          <div class="title"></div>
+          </div>
+           <div class="box">    
+          <div class="title"></div>
+          </div>
+           <div class="box">    
+          <div class="title"></div>
+          </div>
+           <div class="box">    
+          <div class="title"></div>
+          </div>
+           <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+          <div class="box">    
+          <div class="title"></div>
+          </div>
+      </div>
+</body>
+</html>
