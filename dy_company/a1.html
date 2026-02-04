@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+     <meta name="format-detection" content="telephone=no" />
+    <title>CEO인사말</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    
+    
+    <style>  
+        .about_bg{width:100%;background: url(imgs/a1_bg.jpg);height: 400px;  background-repeat: no-repeat; background-size:cover; background-position:center; background-attachment: fixed;}
+        .about_bg .bg_wrap{width: 1200px; margin: auto; height: 100%; position: relative;}
+        .bg_wrap h1{position: absolute; font-size:26px; background-color: white; box-sizing: border-box; bottom:0; padding: 0 30px;height:60px; line-height: 60px;}
+        .ceo_mento{width: 1200px;margin: auto; position: relative;}
+        .ceo_mento p{padding-top: 10vh;}
+        .about_sa{text-align: right;}
+        @media screen and (max-width:769px){
+        .about_bg{background: url(imgs/a1_bg_m.jpg);height: 200px; background-repeat: no-repeat;  background-position:center; background-size: cover;}
+        .about_bg .bg_wrap{width: 100%;}
+        .bg_wrap h1{font-size:18px;  padding: 0 20px;height:40px; line-height:40px; }
+        .ceo_mento{width:90%;}
+        .ceo_mento p{padding-top: 5vh; font-size: 14px;}
+        }
+        
+    </style>
+    
+</head>
+<body>
+<div class="mobile_header">
+        <div class="mobile_top">
+            <div class="mobile_ham">
+                <li><i class="fas fa-bars"></i></li>
+                <li><i class="fas fa-chevron-left"></i></li>
+            </div>
+            <div class="mobile_logo">
+                <a href="index.html"><img src="imgs/logo.jpg" alt="logo"></a>
+            </div>
+        </div>
+        <div class="mobile_menu">
+            <div class="m_wrap">
+                <li class="m_menu"><a href="index.html">HOME</a></li>
+                <li class="m_menu"><a href="a1.html">CEO인사말</a></li>
+                <li class="m_menu"><a href="b1.html">회사소개</a></li>
+                <li class="m_menu"><a href="p1.html">인재채용</a></li>
+                <li class="m_menu"><a href="n1.html">공지사항</a></li>
+                <li class="m_menu"><a href="s1.html">고객센터</a></li>
+                <li class="m_menu"><a href="e1.html">오시는 길</a></li> 
+            </div>
+        </div>
+ </div>
+ <script>
+function mobile_menu() {
+        $('.mobile_ham li:first-child').click(function () {
+            $(this).fadeOut(300, function () {
+                $('.mobile_ham li:last-child').fadeIn(300);
+            });
+            $('.mobile_menu').fadeIn(300, function () {
+                $(this).stop().animate({
+                    left: 0
+                }, 300);
+            })
+        });
+        $('.mobile_ham li:last-child').click(function () {
+            $(this).fadeOut(300, function () {
+                $('.mobile_ham li:first-child').fadeIn(300);
+            });
+            $('.mobile_menu').stop().animate({
+                left: '-100%'
+            }, 300, function () {
+                $(this).fadeOut(300);
+            });
+        });
+    }
+    mobile_menu();    
+</script>
+<header>
+    <div class="header_wrap">
+        <div class="logo"><a href="index.html"><img src="imgs/logo.jpg" alt="로고이미지"></a></div>
+        <ul class="menu_wrap">
+            <a href="a1.html"><li>CEO인사말</li></a>
+            <a href="b1.html">
+            <li>회사소개
+            <ul class="s_menu">
+                <a href="b1.html">회사개요</a>
+                <a href="b2.html">회사연혁</a>
+                <a href="b3.html">비전과 전략</a>
+            </ul>
+            </li>
+            </a>
+            <a href="p1.html"><li>인재채용</li></a>
+            <a href="n1.html"><li>공지사항</li></a>
+             <a href="s1.html"><li>고객센터</li></a>
+            <a href="e1.html"><li>오시는 길</li></a>
+        </ul>
+    </div>
+</header>
+<div class="cont_wrap">
+  <div class="about_bg">
+      <div class="bg_wrap">
+          <h1>CEO 인사말</h1>
+      </div>
+  </div>
+ <div class="ceo_mento">
+     
+      <p class="txt">저희 동양자산관리대부㈜는 NPL전문자산관리회사입니다. 2015년 11월 창사이래 고려저 축은행 NPL매입(편입 OPB 184억원)을 시작으로 편입 OPB 3천억원을 돌파 하였습니다.<br><br>
+당사는 해당분야의 전문가들이 NPL투자 및 자산관리 업무 등을 담당하고 있으며, 채권금 융기관, 증권사, 전문NPL투자회사, 자산운용사들과 다양한 파트너쉽을 형성하고 있으며
+법무법인, 회계법인 등 전문가 네트워크를 구축하여 종합금융그룹으로 성장을 목표로 하고 있습니다.<br><br>
+또한 당사는 금융감독위와 금융감독원 감사하에 당사내 준법감시체제구축 및 이를 통한
+내부감사시스템의 실시를 통한 철저한 리스크 관리와 윤리강령의 준수로 고객 여러분의
+안정적 생활과 금융경제의 발전에 기여해 왔습니다.<br><br>
+앞으로도 전문 금융회사로서 지금까지 축척한 노하우와 경험을 바탕으로 고객 여러분의
+문제해결에 기여할 수 있는 기업으로서 성장해 나가고자 합니다.<br><br>
+당사는 격변하는 금융시장에서 금융시스템의 재무건전성 확보와 금융유통 선순환 구조에
+기여하고 있으며 강한 신념과 빠른 대응으로 NPL시장을 선도하는 기업으로 거듭날 수 있
+도록 노력하겠습니다.<br><br>
+동양의 모든 임직원은 사회적 책임을 갖고 여러분의 성원과 기대에 부응하는 신뢰와 존중
+의 파트너가 되기 위하여 최선의 노력을 다하겠습니다.<br><br>
+감사합니다.<br><br><br></p>
+ <p class="about_sa">동양자산관리대부 주식회사<br>대표이사 김인해 (대표님 서명)</p>
+  </div>
+  
+</div>
+   
+<footer>
+   <div class="foot">
+    <div class="f_left">
+        <p>주소 : 서울 마포구 마포대로 20 oooooo<br>
+사업자등록번호 : 000 000 00000<br>
+감독기관명칭 : 금융감독원 (1332)</p>
+    </div>
+    <div class="f_logo"><img src="imgs/f_logo.png" alt="푸터로고"></div>
+    </div>
+</footer>
+
+
+<script>
+  
+</script>
+</body>
+</html>

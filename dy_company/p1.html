@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no" />
+    <title>인재채용</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    
+    
+    <style>
+        .about_bg{width:100%;background: url(imgs/p1_bg.jpg);height: 400px;  background-repeat: no-repeat; background-size:cover; background-position:center; background-attachment: fixed;}
+        .about_bg .bg_wrap{width: 1200px; margin: auto; height: 100%; position: relative;}
+        .bg_wrap h1{position: absolute; font-size:26px; background-color: white; box-sizing: border-box; bottom:0; padding: 0 30px;height:60px; line-height: 60px;}
+        
+        /*인재채용*/
+.person_wrap{width: 100%; padding: 10vh 0 5vh 0;}
+.person_wrap .p_wrap1, .person_wrap .p_wrap2{width: 1200px; margin: auto; display: inline-block;position: relative; left: 50%; transform: translateX(-50%); margin: 5vh 0;}
+.person_wrap .p_wrap1 h3, .person_wrap .p_wrap2 h3{text-align: center;font-size:1.5vw; font-weight: bold;}
+.person_wrap .p_wrap1 ul, .person_wrap .p_wrap2 ul{display: inline-block; transform: translateX(-50%); left: 50%; position: relative; width:100%;}
+.person_wrap .p_wrap1 ul li{float: left; margin:5vh 20px; width: calc((100% - 120px) / 3); box-sizing: border-box; padding: 0 50px; text-align: center;}
+.person_wrap .p_wrap1 ul li span{ font-size:0.95vw; font-weight: bold; color:#3e6be8;}
+.person_wrap .p_wrap1 ul li p{font-size: 14px; margin-top: 10px;}
+.person_wrap .p_wrap2 ul{}
+.person_wrap .p_wrap2 ul li{float: left; margin:5vh 20px; width: calc((100% - 240px) / 6);}
+.person_wrap .p_wrap2 ul li img{display: block; width:30%; margin: auto;}
+.person_wrap .p_wrap2 ul li p{text-align: center;font-size: 0.95vw; margin-top: 10px; }
+.person_wrap .p_wrap2 ul li p span{color:#3e6be8;font-weight: bold; }
+.person_wrap .p_wrap2 .p_doc{width:100%;}
+.person_wrap .p_wrap2 .p_doc .p_box{margin:0 30px; width: calc((100% - 180px) / 3); background-color:#f4f9ff; overflow: hidden; float: left; height:170px; box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.09);}
+.person_wrap .p_wrap2 .p_doc .p_box h3{text-align: center; height: 60px;line-height: 60px; width:100%; background: url(imgs/p_box1.png); background-repeat: no-repeat; background-size: cover; background-position: center; color: white; font-size:18px;}
+.person_wrap .p_wrap2 .p_doc .p_box p{box-sizing: border-box;text-align: center; padding: 20px 0 0 0; font-size: 14px;}
+.person_wrap a{display: block; color: white; background-color: #3e6be8; width: 10vw; padding: 15px; font-size: 1.2vw; border-radius:30px;margin: auto; text-align: center; margin-top: 5vh;}
+
+   @media screen and (max-width:769px){
+        .about_bg{background: url(imgs/p1_bg_m.jpg);height: 200px; background-repeat: no-repeat;  background-position:center; background-size: cover;}
+        .about_bg .bg_wrap{width: 100%;}
+        .bg_wrap h1{font-size:18px;  padding: 0 20px;height:40px; line-height:40px; }
+    
+       /*인재채용*/
+.person_wrap{width: 100%; padding:5vh 0 5vh 0; margin: auto;}
+.person_wrap .p_wrap1, .person_wrap .p_wrap2{width: 100%;}
+.person_wrap .p_wrap1 h3, .person_wrap .p_wrap2 h3{text-align: center;font-size:16px;}
+.person_wrap .p_wrap1 ul li{float: left; margin:5vh 0; width:100%;  padding: 0 20px; text-align: center;}
+.person_wrap .p_wrap1 ul li span{ font-size:16px;}
+.person_wrap .p_wrap1 ul li p{font-size: 12px; margin-top: 10px;}
+.person_wrap .p_wrap2 ul{}
+.person_wrap .p_wrap2 ul li{float: left; margin:3vh 0; width:calc(100% / 3);}
+.person_wrap .p_wrap2 ul li img{display: block; width:30%; margin: auto;}
+.person_wrap .p_wrap2 ul li p{font-size: 12px; }
+.person_wrap .p_wrap2 .p_doc{width: 80%; margin: auto;}
+.person_wrap .p_wrap2 .p_doc .p_box{margin:0 0; width: 100%; background-color:#f4f9ff; overflow: hidden; float: left; height:auto; margin-bottom: 30px;padding-bottom: 20px;}
+.person_wrap .p_wrap2 .p_doc .p_box h3{height: 40px;line-height: 40px; background-position: bottom;font-size:14px;}
+.person_wrap .p_wrap2 .p_doc .p_box p{font-size: 12px;}
+.person_wrap a{width: 50%; padding: 10px; font-size: 5vw; border-radius: 30px;margin-top:5vh}
+       
+        }     
+    </style>
+    
+</head>
+<body>
+<div class="mobile_header">
+        <div class="mobile_top">
+            <div class="mobile_ham">
+                <li><i class="fas fa-bars"></i></li>
+                <li><i class="fas fa-chevron-left"></i></li>
+            </div>
+            <div class="mobile_logo">
+                <a href="index.html"><img src="imgs/logo.jpg" alt="logo"></a>
+            </div>
+        </div>
+        <div class="mobile_menu">
+            <div class="m_wrap">
+                <li class="m_menu"><a href="index.html">HOME</a></li>
+                <li class="m_menu"><a href="a1.html">CEO인사말</a></li>
+                <li class="m_menu"><a href="b1.html">회사소개</a></li>
+                <li class="m_menu"><a href="p1.html">인재채용</a></li>
+                <li class="m_menu"><a href="n1.html">공지사항</a></li>
+                <li class="m_menu"><a href="s1.html">고객센터</a></li>
+                <li class="m_menu"><a href="e1.html">오시는 길</a></li> 
+            </div>
+        </div>
+ </div>
+ <script>
+function mobile_menu() {
+        $('.mobile_ham li:first-child').click(function () {
+            $(this).fadeOut(300, function () {
+                $('.mobile_ham li:last-child').fadeIn(300);
+            });
+            $('.mobile_menu').fadeIn(300, function () {
+                $(this).stop().animate({
+                    left: 0
+                }, 300);
+            })
+        });
+        $('.mobile_ham li:last-child').click(function () {
+            $(this).fadeOut(300, function () {
+                $('.mobile_ham li:first-child').fadeIn(300);
+            });
+            $('.mobile_menu').stop().animate({
+                left: '-100%'
+            }, 300, function () {
+                $(this).fadeOut(300);
+            });
+        });
+    }
+    mobile_menu();    
+</script>
+<header>
+    <div class="header_wrap">
+        <div class="logo"><a href="index.html"><img src="imgs/logo.jpg" alt="로고이미지"></a></div>
+        <ul class="menu_wrap">
+            <a href="a1.html"><li>CEO인사말</li></a>
+            <a href="b1.html">
+            <li>회사소개
+            <ul class="s_menu">
+                <a href="b1.html">회사개요</a>
+                <a href="b2.html">회사연혁</a>
+                <a href="b3.html">비전과 전략</a>
+            </ul>
+            </li>
+            </a>
+            <a href="p1.html"><li>인재채용</li></a>
+             <a href="n1.html"><li>공지사항</li></a>
+              <a href="s1.html"><li>고객센터</li></a>
+            <a href="e1.html"><li>오시는 길</li></a>
+        </ul>
+    </div>
+</header>
+<div class="cont_wrap">
+  <div class="about_bg">
+      <div class="bg_wrap">
+          <h1>인재채용</h1>
+      </div>
+  </div>
+
+  
+  <div class="person">
+     <div class="person_wrap">
+         <div class="p_wrap1">
+             <h3>인재상</h3>
+             <ul>
+                 <li>
+                     <span>1. Professinal</span>
+                     <p>회사의 주인의식을 가지고 능동적으로<br>도전하는 열정을 가진 인재</p>
+                 </li>
+                 <li>
+                     <span>2. Positive</span>
+                     <p>사내 구성원간 상호 존중하고 신뢰하며,<br>긍정적인 인재</p>
+                 </li>
+                 <li>
+                     <span>3. Morality</span>
+                     <p>높은 윤리의식과 준법정신을 가진 인재</p>
+                 </li>
+             </ul>
+         </div>
+         <div class="p_wrap2">
+             <h3>전형절차</h3>
+             <ul>
+                 <li>
+                     <img src="imgs/person_icon1.png" alt="전형절차1">
+                     <p>
+                         <span>STEP 1</span><br>
+                         서류전형
+                     </p>
+                 </li>
+                 <li>
+                      <img src="imgs/person_icon2.png" alt="전형절차2">
+                     <p>
+                         <span>STEP 2</span><br>
+                         1차전형<br><span style="font-size:10px; color: #555;">(적성검사 및 실무진면접)</span>
+                     </p>
+                 </li>
+                 <li>
+                      <img src="imgs/person_icon3.png" alt="전형절차3">
+                     <p>
+                         <span>STEP 3</span><br>
+                         2차전형<br><span style="font-size:10px; color: #555;">(임원면접)</span>
+                     </p>
+                 </li>
+                 <li>
+                      <img src="imgs/person_icon4.png" alt="전형절차4">
+                     <p>
+                         <span>STEP 4</span><br>
+                         합격통보
+                     </p>
+                 </li>
+                 <li>
+                      <img src="imgs/person_icon5.png" alt="전형절차5">
+                     <p>
+                         <span>STEP 5</span><br>
+                         합격자구비서류
+                     </p>
+                 </li>
+                 <li>
+                      <img src="imgs/person_icon6.png" alt="전형절차5">
+                     <p>
+                         <span>STEP 6</span><br>
+                         채용확정
+                     </p>
+                 </li>
+             </ul>
+             <div class="p_doc"> 
+                <div class="p_box p_box1">
+                    <h3>제출서류</h3>
+                    <p>이력서, 자기소개서, 경력기술서 등</p>
+                </div>
+                <div class="p_box p_box2">
+                    <h3>근무조건</h3>
+                    <p>고용형태 : 정규직 등<br>급여조건 : 협의 및 회사내규에 따름<br>근무지 : 서울본사</p>
+                </div>
+                <div class="p_box p_box3">
+                    <h3>문의처</h3>
+                    <p>담당자 : 정다빈 대리<br>E-mail : dada7@dy300.co.kr<br>TEL : 02-3273-5972</p>
+                </div>
+             </div>
+         </div>
+
+         <a href="mailto:dada7@dy300.co.kr" target="_blank">지원하기</a>
+     </div>
+  </div>
+  
+  
+  
+  
+  
+</div>
+   
+<footer>
+   <div class="foot">
+    <div class="f_left">
+        <p>주소 : 서울 마포구 마포대로 20 oooooo<br>
+사업자등록번호 : 000 000 00000<br>
+감독기관명칭 : 금융감독원 (1332)</p>
+    </div>
+    <div class="f_logo"><img src="imgs/f_logo.png" alt="푸터로고"></div>
+    </div>
+</footer>
+
+
+<script>
+  
+</script>
+</body>
+</html>

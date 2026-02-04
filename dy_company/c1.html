@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+     <meta name="format-detection" content="telephone=no" />
+    <title>조직도</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    
+    
+    <style>
+        .about_bg{width:100%;background: url(imgs/c1_bg.jpg);height: 400px;  background-repeat: no-repeat; background-size:cover; background-position:center; background-attachment: fixed;}
+        .about_bg .bg_wrap{width: 1200px; margin: auto; height: 100%; position: relative;}
+        .bg_wrap h1{position: absolute; font-size:26px; background-color: white; box-sizing: border-box; bottom:0; padding: 0 30px;height:60px; line-height: 60px;}
+        .table_wrap{width:1200px; margin: auto; margin-top: 5vh;}
+/*
+        .c_info{width:50%;  font-size: 12px; text-align: center; border-collapse: collapse; border: 1px solid #888; margin: auto;}
+        .c_info td{padding: 5px 0; border: 1px solid #888;}
+        .blue{background-color:#e1eaf2;}
+        .yellow{background-color:#ede9d0;}
+        .pink{background-color:#f5e6e8;}
+        .green{background-color:#e1f0ec;}
+*/
+        .c_img{width:100%;margin-top: 10vh;}
+        .c_img img{width:100%;}
+/*.c_cell{width:100%; background-color: antiquewhite; text-align: center;border-collapse: collapse; border: 1px solid #888; margin-top: 5vh;}
+.c_cell td{padding: 5px 0; border: 1px solid #888;}
+*/
+        @media screen and (max-width:769px){
+        .about_bg{width:100%;background: url(imgs/c1_bg_m.jpg);height: 200px; background-repeat: no-repeat;  background-position:center; background-size: cover;}
+        .about_bg .bg_wrap{width: 100%;}
+        .bg_wrap h1{font-size:18px;  padding: 0 20px;height:40px; line-height:40px;}
+        .table_wrap{width:100%; }
+/*
+        .c_info{width:80%;font-size: 10px;}
+        .c_info td{padding: 5px 0; border: 1px solid #888;}
+*/
+        
+        }
+        
+    </style>
+    
+</head>
+<body>
+<div class="mobile_header">
+        <div class="mobile_top">
+            <div class="mobile_ham">
+                <li><i class="fas fa-bars"></i></li>
+                <li><i class="fas fa-chevron-left"></i></li>
+            </div>
+            <div class="mobile_logo">
+                <a href="index.html"><img src="imgs/logo.jpg" alt="logo"></a>
+            </div>
+        </div>
+        <div class="mobile_menu">
+            <div class="m_wrap">
+                <li class="m_menu"><a href="index.html">HOME</a></li>
+                <li class="m_menu"><a href="a1.html">CEO인사말</a></li>
+                <li class="m_menu"><a href="b1.html">회사소개</a></li>
+                <li class="m_menu"><a href="p1.html">인재채용</a></li>
+                <li class="m_menu"><a href="n1.html">공지사항</a></li>
+                <li class="m_menu"><a href="s1.html">고객센터</a></li>
+                <li class="m_menu"><a href="e1.html">오시는 길</a></li> 
+            </div>
+        </div>
+ </div>
+ <script>
+function mobile_menu() {
+        $('.mobile_ham li:first-child').click(function () {
+            $(this).fadeOut(300, function () {
+                $('.mobile_ham li:last-child').fadeIn(300);
+            });
+            $('.mobile_menu').fadeIn(300, function () {
+                $(this).stop().animate({
+                    left: 0
+                }, 300);
+            })
+        });
+        $('.mobile_ham li:last-child').click(function () {
+            $(this).fadeOut(300, function () {
+                $('.mobile_ham li:first-child').fadeIn(300);
+            });
+            $('.mobile_menu').stop().animate({
+                left: '-100%'
+            }, 300, function () {
+                $(this).fadeOut(300);
+            });
+        });
+    }
+    mobile_menu();    
+</script>
+<header>
+    <div class="header_wrap">
+        <div class="logo"><a href="index.html"><img src="imgs/logo.jpg" alt="로고이미지"></a></div>
+        <ul class="menu_wrap">
+            <a href="a1.html"><li>CEO인사말</li></a>
+            <a href="b1.html">
+            <li>회사소개
+            <ul class="s_menu">
+                <a href="b1.html">회사개요</a>
+                <a href="b2.html">회사연혁</a>
+                <a href="b3.html">비전과 전략</a>
+            </ul>
+            </li>
+            </a>
+            <a href="p1.html"><li>인재채용</li></a>
+            <a href="n1.html"><li>공지사항</li></a>
+             <a href="s1.html"><li>고객센터</li></a>
+            <a href="e1.html"><li>오시는 길</li></a>
+        </ul>
+    </div>
+</header>
+<div class="cont_wrap">
+  <div class="about_bg">
+      <div class="bg_wrap">
+          <h1>회사 조직도</h1>
+      </div>
+  </div>
+ <div class="table_wrap">
+<!--
+  <table class="c_info">
+      <tr>
+          <td colspan="4">동양자산관리 인원 조직도(내선포함)</td>
+      </tr>
+      <tr>
+          <td colspan="4">기준일 8/1/2020</td>
+      </tr>
+      <tr>
+          <td colspan="4"><span style="font-weight: bold">※인원구성</span> 총인원 : 56명 (⼥ 15명 | 男 41명)</td>
+      </tr>
+      <tr>
+          <td class="blue">전출</td>
+          <td class="yellow">육아휴직</td>
+          <td class="pink">전입</td>
+          <td class="green">입사</td>
+      </tr>
+      <tr>
+          <td colspan="4">※아르바이트 제외<br>※전출 및 육아휴직자 포함<br>※전입 제외</td>
+      </tr>
+  </table>
+-->
+  
+ <!-- <table class="c_cell">
+      <colgroup>
+          <col width="11.1%">
+          <col width="11.1%">
+          <col width="11.1%">
+          <col width="11.1%">
+          <col width="11.1%">
+          <col width="11.1%">
+          <col width="11.1%">
+          <col width="11.1%">
+          <col width="11.1%">
+      </colgroup>
+      
+     <tbody>
+         <tr>
+             <td colspan="4">감사</td>
+             <td colspan="5">보호감사</td>
+         </tr>
+         <tr>
+             <td rowspan="2" colspan="4">이사회</td>
+             <td colspan="5">CEO 대표이사</td>
+         </tr>
+         <tr>
+             <td colspan="5">도유석</td>
+         </tr>
+         
+         <tr>
+             <td colspan="9">CSO 전무이사<br>최고전략변화책임자</td>
+         </tr>
+         <tr>
+             <td colspan="3">총괄본부장</td>
+             <td colspan="3">김원진</td>
+             <td colspan="3">621</td>
+         </tr>
+         
+         <tr>
+             <td colspan="3">경영본부</td>
+             <td colspan="3">영업본부</td>
+             <td colspan="3">신규영업팀</td>
+         </tr>
+         <tr>
+             <td colspan="1">이사(본부장)</td>
+             <td colspan="1">유병로</td>
+             <td colspan="1">109</td>
+             <td colspan="1" rowspan="2">부장(본부장)</td>
+             <td colspan="1" rowspan="2">오영근</td>
+             <td colspan="1" rowspan="2">155</td>
+             <td colspan="1" rowspan="2">차장(팀장)</td>
+             <td colspan="1" rowspan="2">이경훈</td>
+             <td colspan="1" rowspan="2">160</td>
+         </tr>
+         <tr>
+             <td colspan="1">부장</td>
+             <td colspan="1">정일형</td>
+             <td colspan="1">151</td>
+         </tr>
+         
+         
+         
+     </tbody>
+      
+  </table>-->
+  
+  <div class="c_img">
+      <img src="imgs/c_img.jpg" alt="">
+  </div>
+  
+  </div>
+  
+</div>
+   
+<footer>
+   <div class="foot">
+    <div class="f_left">
+        <p>주소 : 서울 마포구 마포대로 20 oooooo<br>
+사업자등록번호 : 000 000 00000<br>
+감독기관명칭 : 금융감독원 (1332)</p>
+    </div>
+    <div class="f_logo"><img src="imgs/f_logo.png" alt="푸터로고"></div>
+    </div>
+</footer>
+
+
+<script>
+  
+</script>
+</body>
+</html>

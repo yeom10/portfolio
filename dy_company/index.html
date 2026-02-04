@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+     <meta name="format-detection" content="telephone=no" />
+    <title>동양자산관리대부</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    
+</head>
+<body>
+<div class="mobile_header">
+        <div class="mobile_top">
+            <div class="mobile_ham">
+                <li><i class="fas fa-bars"></i></li>
+                <li><i class="fas fa-chevron-left"></i></li>
+            </div>
+            <div class="mobile_logo">
+                <a href="index.html"><img src="imgs/logo.jpg" alt="logo"></a>
+            </div>
+        </div>
+        <div class="mobile_menu">
+            <div class="m_wrap">
+                <li class="m_menu"><a href="index.html">HOME</a></li>
+                <li class="m_menu"><a href="a1.html">CEO인사말</a></li>
+                <li class="m_menu"><a href="b1.html">회사소개</a></li>
+                <li class="m_menu"><a href="p1.html">인재채용</a></li>
+                <li class="m_menu"><a href="n1.html">공지사항</a></li>
+                <li class="m_menu"><a href="s1.html">고객센터</a></li>
+                <li class="m_menu"><a href="e1.html">오시는 길</a></li> 
+            </div>
+        </div>
+ </div>
+ <script>
+function mobile_menu() {
+        $('.mobile_ham li:first-child').click(function () {
+            $(this).fadeOut(300, function () {
+                $('.mobile_ham li:last-child').fadeIn(300);
+            });
+            $('.mobile_menu').fadeIn(300, function () {
+                $(this).stop().animate({
+                    left: 0
+                }, 300);
+            })
+        });
+        $('.mobile_ham li:last-child').click(function () {
+            $(this).fadeOut(300, function () {
+                $('.mobile_ham li:first-child').fadeIn(300);
+            });
+            $('.mobile_menu').stop().animate({
+                left: '-100%'
+            }, 300, function () {
+                $(this).fadeOut(300);
+            });
+        });
+    }
+    mobile_menu();    
+</script>
+
+<header>
+    <div class="header_wrap">
+        <div class="logo"><a href="index.html"><img src="imgs/logo.jpg" alt="로고이미지"></a></div>
+        <ul class="menu_wrap">
+            <a href="a1.html"><li>CEO인사말</li></a>
+            <a href="b1.html">
+            <li>회사소개
+            <ul class="s_menu">
+                <a href="b1.html">회사개요</a>
+                <a href="b2.html">회사연혁</a>
+                <a href="b3.html">비전과 전략</a>
+            </ul>
+            </li>
+            </a>
+            <a href="p1.html"><li>인재채용</li></a>
+            <a href="n1.html"><li>공지사항</li></a>
+            <a href="s1.html"><li>고객센터</li></a>
+            <a href="e1.html"><li>오시는 길</li></a>
+        </ul>
+    </div>
+</header>
+<div class="cont_wrap">
+  <div class="front_wrap">
+    <div class="front_txt">
+                <p>동양자산관리는<br>신뢰와 존중으로 가치를 만들어 갑니다!</p>
+                <a href="a1.html"><span class="front_btn">About Us</span></a>
+            </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      <div class="swiper-slide"></div>
+      </div>
+      <!-- Add Pagination
+      <div class="swiper-pagination"></div> -->
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      
+      <div class="front_ani">
+      <img src="imgs/mouse_bg.png" alt="마우스 애니메이트">
+     </div>
+    </div>  
+       
+    
+   </div>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+      spaceBetween:0,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+//      pagination: {
+//        el: '.swiper-pagination',
+//        clickable: true,
+//      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  
+  <div class="main_about">
+     <div class="title">
+         <h2>ABOUT COMPANY</h2>
+         <p>신뢰와 존중으로 가치를 만들어 가는 동양자산관리대부입니다!</p>
+     </div>
+     <span class="line"></span>
+     <div class="wrap">
+         <div class="a_wrap">
+             <div class="t_wrap">
+                 <h3>회사개요</h3>
+                 <p>NPL전문자산관리회사로서
+선도적 위치에서 시장을 리딩하
+는 회사</p>
+            <a href="b1.html">MORE <span class="more_line"></span></a>
+             </div>
+             <div class="img_wrap"><img src="imgs/area_c01.jpg" alt="회사소개"></div>
+         </div>
+         <div class="a_wrap">
+             <div class="t_wrap">
+                 <h3>회사연혁</h3>
+                 <p>창사이후 철저한 윤리강령 준수
+와 종합금융그룹으로 도약</p>
+            <a href="b2.html">MORE <span class="more_line"></span></a>
+             </div>
+             <div class="img_wrap"><img src="imgs/area_c02.jpg" alt="회사소개"></div>
+         </div>
+         
+         <div class="a_wrap">
+             <div class="t_wrap">
+                 <h3>비전과 전략</h3>
+                 <p>안정적 수익모델 창출
+끊임없이 발전하는 NPL전문회사</p>
+            <a href="b3.html">MORE <span class="more_line"></span></a>
+             </div>
+             <div class="img_wrap"><img src="imgs/area_c03.jpg" alt="회사소개"></div>
+         </div>
+         <div class="a_wrap">
+             <div class="t_wrap">
+                 <h3>회사조직도</h3>
+                 <p>사내상시감시체계 확립/
+특성화된 전문가집단</p>
+            <a href="c1.html">MORE <span class="more_line"></span></a>
+             </div>
+             <div class="img_wrap"><img src="imgs/area_c04.jpg" alt="회사소개"></div>
+         </div>
+         
+     </div>
+  </div>
+  
+ <div class="serv">
+    <img src="imgs/serv01.png" alt="고객센터 이미지1" class="serv01">
+    <img src="imgs/serv02.png" alt="고객센터 이미지2" class="serv02">
+    <img src="imgs/serv03.png" alt="고객센터 이미지3" class="serv03">
+     <div class="title">
+         <h2>고객센터</h2>
+     </div>
+     <span class="line"></span>
+     <div class="serv_txt">
+         <h2>고객의 소리</h2>
+         <p>동양자산관리대부에 원하시는 문의, 칭찬 , 불만 , 제안 , 요청사항을 자유롭게 접수할 수 있습니다。</p>
+     </div>
+     <a href="s1.html">접수하기</a>
+ </div>
+ 
+  
+  <div class="notice">
+      <div class="title">
+         <h2>COMMUNITY</h2>
+         <p>동양자산관리대부의 실시간 업데이트되는 공지사항입니다.</p>
+     </div>
+     <span class="line"></span>
+     <div class="noti_wrap">
+         <div class="noti_left"><img src="imgs/com_01.jpg" alt="상담배너"></div>
+         <div class="noti_center">
+             <h4>공지사항<a href="n1.html"><img src="imgs/n_plus.png" alt="공지사항 더보기"></a></h4>
+             <ul>
+             <a href=""><li>사내 불법추심교육실시<span>2020.07.06</span></li></a>
+             <a href=""><li>불법채권추심 대응요령공지<span>2020.07.04</span></li></a>
+             <a href=""><li>2020년 사내 워크샵 실시<span>2020.03.02</span></li></a>
+             <a href=""><li>법정최고금리 인하에 관한 안내<span>2018.02.08</span></li></a>
+             </ul>
+         </div>
+         <div class="noti_right">
+             <a class="r_txt">(CI)동양자산관리대부㈜<br>2016-금감원-0363(대부업)</a>
+             <a class="r_img1" href="http://www.clfa.or.kr/popup_fcsc_list.asp" target="_blank"><img src="imgs/r_img1.jpg" alt="금융위원회"></a>
+             <a class="r_img2" href="http://fine.fss.or.kr/main/index.jsp" target="_blank"><img src="imgs/r_img2.jpg" alt="파인 금융소비자 정보포털"></a>
+         </div>
+     </div>
+     
+  </div>
+   
+   <div class="rule">
+   <div class="rule_wrap">
+       <ul>
+           <a href="http://www.ta-asset.com/bbs/board.php?bo_table=privacy" target="_blank">개인정보처리방침</a>
+           <a href="http://www.ta-asset.com/bbs/content.php?co_id=legal" target="_blank">법적고지 및 책임</a>
+           <a href="http://www.ta-asset.com/bbs/content.php?co_id=process" target="_blank">채권추심업무 처리절차</a>
+           <a href="http://www.ta-asset.com/bbs/content.php?co_id=illegal" target="_blank">불법채권추심 대응요령</a>
+           <a href="http://www.ta-asset.com/bbs/content.php?co_id=email" target="_blank">이메일 무단수집거부</a>
+           <a href="#">영상정보처리기기 운영지침</a>
+           <a href="http://www.ta-asset.com/bbs/content.php?co_id=form" target="_blank">대부거래약관</a>
+           <a href="http://www.ta-asset.com/bbs/board.php?bo_table=information1" target="_blank">신용정보활용체제공시</a>
+           <a href="#">소멸시효 완성채권 추심관련 금융소비자 유의사항</a>
+           <a href="http://www.ta-asset.com/bbs/content.php?co_id=expire" target="_blank">불법사금융피해신고센터</a>
+       </ul>
+   </div>
+<!--
+    <div class="swiper-container2">
+    <div class="swiper-wrapper">
+        <a href="#" class="swiper-slide">개인정보처리방침</a>
+        <a href="#" class="swiper-slide">법적고지 및 책임</a>
+        <a href="#" class="swiper-slide">채권추심업무 처리절차</a>
+        <a href="#" class="swiper-slide">불법채권추심 대응요령</a>
+        <a href="#" class="swiper-slide">이메일 무단수집거부</a>
+        <a href="#" class="swiper-slide">영상정보처리기기 운영지침</a>
+        <a href="#" class="swiper-slide">대부거래약관</a>
+        <a href="#" class="swiper-slide">신용정보활용체제공시</a>
+        <a href="#" class="swiper-slide">소멸시효 완성채권 추심관련 금융소비자 유의사항</a>
+        <a href="#" class="swiper-slide">불법사금융피해신고센터(1332)</a>
+    </div>
+    <div class="swiper-button-next"><i class="fas fa-angle-right"></i></div>
+    <div class="swiper-button-prev"><i class="fas fa-angle-left"></i></div>
+  </div>
+  <script>
+    var swiper = new Swiper('.swiper-container2', {
+      slidesPerView: 'auto',
+      spaceBetween:30,
+      
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+-->
+   </div>
+   
+   
+</div>
+   
+<footer>
+   <div class="foot">
+    <div class="f_left">
+        <p>주소 : 서울 마포구 마포대로 20 oooooo<br>
+사업자등록번호 : 000 000 00000<br>
+감독기관명칭 : 금융감독원 (1332)</p>
+    </div>
+    <div class="f_logo"><img src="imgs/f_logo.png" alt="푸터로고"></div>
+    </div>
+</footer>
+
+
+<script>
+    $('.front_ani').click(function(){
+        var ww = $(window).height();
+        console.log(ww)
+        $('body,html').stop().animate({scrollTop:ww/2},500);
+    });
+    
+    $(window).scroll(function(){
+			srctop=$(window).scrollTop();
+            serv_top=$('.serv').offset().top - 300;
+//			console.log(serv_top);
+			if(srctop>=serv_top){
+			$('.serv .serv01').addClass('add_serv01');
+			$('.serv .serv02').addClass('add_serv02');
+			$('.serv .serv03').addClass('add_serv03');
+			}else{
+           $('.serv .serv01').removeClass('add_serv01');
+			$('.serv .serv02').removeClass('add_serv02');
+			$('.serv .serv03').removeClass('add_serv03');
+			}
+		});
+ 
+   
+</script>
+</body>
+</html>

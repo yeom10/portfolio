@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+    list-style: none;
+}
+html{
+    font-size: 62.5%; /*1rem은 10px로 변환(원래는 16px)*/
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #fafafa;
+    font-size: 14px;
+    font-family: 'Nanum Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    min-width: 320px;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+}
+button{
+    background: none;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+input:focus{
+    outline: none;
+}
+/* font */
+.inner>h1, .details h2{font-family: 'Alegreya Sans SC';}
+.inner>.border, .card button{font-family: 'Quicksand';}
+/* start */
+.testimonial_section{position: relative; top:50%; transform: translateY(-50%);}
+.inner{max-width:70%;margin: auto;}
+.inner>h1{text-align: center; color: #222222;font-size:3.5vw; letter-spacing:10px;}
+.inner>.border{text-align: center;margin:5vh auto; font-size:2vw; color: #aaaaaa;}
+.testimonial{overflow: hidden;border-radius:5px;/*cursor:pointer;*/ box-shadow:0 3px 10px rgba(0,0,0,0.7); position: relative;}
+.testimonial:hover .card img{transform: scale(1.1);}
+.card{position:relative;}
+.card input, .card .toggle{position:absolute; width:4vw;height:4vw; bottom:2vh; right:1.5vw;outline: none;z-index: 10; cursor: pointer;}
+.card input{opacity:0;}
+.card .toggle{pointer-events:none;border-radius: 50%;background-color: white; transition:0.5s;box-shadow: 0 0 0 0px white; transform-origin: center;}
+.card .toggle span{display: block; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); background-color: black;}
+.card .toggle span:first-child{width:3vh; height:2px; }
+.card .toggle span:last-child{height:3vh; width:2px; }
+.card1 input:checked ~ .toggle{box-shadow: 0 0 0 800px #f63079; transform: rotate(135deg);}
+.card1 input:checked ~ .toggle span{background-color: #f63079;}
+.card2 input:checked ~ .toggle{box-shadow: 0 0 0 800px #2e37c2; transform: rotate(135deg);}
+.card2 input:checked ~ .toggle span{background-color: #2e37c2;}
+.card3 input:checked ~ .toggle{box-shadow: 0 0 0 800px #ffa719; transform: rotate(135deg);}
+.card3 input:checked ~ .toggle span{background-color: #ffa719;}
+.card4 input:checked ~ .toggle{box-shadow: 0 0 0 800px #5800ff; transform: rotate(135deg);}
+.card4 input:checked ~ .toggle span{background-color:#5800ff;}
+.card4 input:checked ~ .toggle{box-shadow: 0 0 0 800px #1cbfe8; transform: rotate(135deg);}
+.card4 input:checked ~ .toggle span{background-color:#1cbfe8;}
+.card  img{width:100%;}
+.card .details{position: absolute;top: 0;left: 0;width:100%;height: 100%;padding:2vh 2vw;box-sizing: border-box;z-index: 11;pointer-events: none; transition: 0.5s; opacity: 0; color: white;}
+.card .details h2{font-size:2vw; letter-spacing: 3px;}
+.card .details ul{margin-top:2vh;}
+.card .details ul li{font-size:1.3vw; padding:0.5vh 0;}
+.card button{outline: none; border: none;  box-shadow: 0 0 5px 0 rgba(0,0,0,0.7); padding:15px 20px; cursor: pointer; position: absolute;z-index: 11; bottom:20%; font-size:1vw; color: white; letter-spacing: 3px; background-color: black;}
+.link{}
+.card input:checked ~ .details{opacity: 1;}
+
+/* responsive */
+@media screen and (max-width:1200px){
+.inner{max-width:80%;}
+.inner>h1{font-size:4vw; letter-spacing:5px;}
+.inner>.border{margin:30px auto; font-size:2vw;}
+.card .details{padding:20px;}
+.card .details h2{font-size:35px; letter-spacing: 5px;}
+.card .details ul{margin-top: 3vh;}
+.card .details ul li{font-size:17px; padding:1vh 0;}
+.card input, .card .toggle{bottom:20px; right:20px;width:50px; height:50px;}
+.card .toggle span:first-child{width:25px; height:2px; }
+.card .toggle span:last-child{height:25px; width:2px; }
+.card button{padding:15px 20px; bottom:20%; font-size:20px;letter-spacing:0;} 
+.testimonial:hover .card img{transform: scale(1);}
+}
+@media screen and (max-width:768px){
+.inner{max-width:90%;}
+.inner>h1{font-size:5vw;}
+.inner>.border{margin:50px auto; font-size:3vw; }
+.card .details h2{font-size:30px; letter-spacing: 3px;}
+.card .details ul{margin-top:2vh;}
+.card .details ul li{font-size:15px; padding:1vh 0;}
+.card .toggle span:first-child{width:20px; height:2px; }
+.card .toggle span:last-child{height:20px; width:2px; }
+.card button{padding:10px 20px; bottom:8%; font-size:15px;}
+}
+@media screen and (max-width:410px){
+.inner{max-width:85%;}
+.inner>h1{font-size:25px; letter-spacing:4px;}
+.inner>.border{margin:20px auto; font-size:15px;}
+.card .details h2{font-size:25px; letter-spacing: 5px;}
+.card .details ul{margin-top:10px;}
+.card .details ul li{font-size:17px; padding:1vh 0;}
+.card .toggle span:first-child{width:25px; height:2px; }
+.card .toggle span:last-child{height:25px; width:2px; }
+.card button{padding:15px 20px; bottom:20%; font-size:15px; letter-spacing:2px;}
+}

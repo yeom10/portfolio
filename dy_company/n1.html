@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+     <meta name="format-detection" content="telephone=no" />
+    <title>공지사항</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    
+    
+    <style>  
+        .about_bg{width:100%;background: url(imgs/n1_bg.jpg);height: 400px;  background-repeat: no-repeat; background-size:cover; background-position:center; background-attachment: fixed;}
+        .about_bg .bg_wrap{width: 1200px; margin: auto; height: 100%; position: relative;}
+        .bg_wrap h1{position: absolute; font-size:26px; background-color: white; box-sizing: border-box; bottom:0; padding: 0 30px;height:60px; line-height: 60px;}
+        
+        .news_wrap{width:1200px; margin: auto;}
+        .news_wrap .n_cnt{width: 100%;}
+        .news_wrap .n_cnt table{width:100%; box-sizing: border-box; border-top: 2px solid #000; margin-top: 10vh; border-collapse: collapse; }
+        .news_wrap .n_cnt th, .news_wrap .n_cnt td{box-sizing: border-box; border-bottom: 1px solid #ddd; padding: 20px 0;}
+        .news_wrap .n_cnt tr td:first-child{text-align: center;}
+        .news_wrap .n_cnt tr td:nth-of-type(2){font-weight: bold;}
+        .news_wrap .n_cnt tr td:last-child{text-align: center;}
+        .news_wrap .n_cnt .pagin_wrap{margin: auto;}
+        .news_wrap .n_cnt .pagin_wrap .paging{display: flex; align-items: center; justify-content: center;}
+        .news_wrap .n_cnt .pagin_wrap .paging>li{display: inline-block;}
+        .news_wrap .n_cnt .pagin_wrap .page_center a{display: block; box-sizing: border-box; background-color: #ddd; border-radius:50%; margin:5vh 10px; height:40px; width: 40px; text-align: center; line-height: 40px;}
+        .news_wrap .n_cnt .pagin_wrap .page_center{display: flex;}
+        .prev_arr{margin-right: 10px;}
+        .next_arr{margin-left: 10px;}
+        
+        .active{background-color: #3e6be8 !important; color: white;}
+        
+        @media screen and (max-width:769px){
+        .about_bg{background: url(imgs/n1_bg_m.jpg);height: 200px; background-repeat: no-repeat;  background-position:center; background-size: cover;}
+        .about_bg .bg_wrap{width: 100%;}
+        .bg_wrap h1{font-size:18px;  padding: 0 20px;height:40px; line-height:40px; }
+            
+        .news_wrap{width:90%; margin: auto;}
+        .news_wrap .n_cnt table{margin-top:7vh;}
+        .news_wrap .n_cnt th, .news_wrap .n_cnt td{ padding: 15px 0; font-size: 14px;}
+        .news_wrap .n_cnt .pagin_wrap .page_center a{margin:3vh 7px; height:30px; width: 30px; line-height: 33px; font-size: 12px;}
+        .prev_arr{margin-right: 10px;}
+        .next_arr{margin-left: 10px;}   
+            
+        }
+        
+    </style>
+    
+</head>
+<body>
+<div class="mobile_header">
+        <div class="mobile_top">
+            <div class="mobile_ham">
+                <li><i class="fas fa-bars"></i></li>
+                <li><i class="fas fa-chevron-left"></i></li>
+            </div>
+            <div class="mobile_logo">
+                <a href="index.html"><img src="imgs/logo.jpg" alt="logo"></a>
+            </div>
+        </div>
+        <div class="mobile_menu">
+            <div class="m_wrap">
+                <li class="m_menu"><a href="index.html">HOME</a></li>
+                <li class="m_menu"><a href="a1.html">CEO인사말</a></li>
+                <li class="m_menu"><a href="b1.html">회사소개</a></li>
+                <li class="m_menu"><a href="p1.html">인재채용</a></li>
+                <li class="m_menu"><a href="#">공지사항</a></li>
+                <li class="m_menu"><a href="s1.html">고객센터</a></li>
+                <li class="m_menu"><a href="e1.html">오시는 길</a></li> 
+            </div>
+        </div>
+ </div>
+ <script>
+function mobile_menu() {
+        $('.mobile_ham li:first-child').click(function () {
+            $(this).fadeOut(300, function () {
+                $('.mobile_ham li:last-child').fadeIn(300);
+            });
+            $('.mobile_menu').fadeIn(300, function () {
+                $(this).stop().animate({
+                    left: 0
+                }, 300);
+            })
+        });
+        $('.mobile_ham li:last-child').click(function () {
+            $(this).fadeOut(300, function () {
+                $('.mobile_ham li:first-child').fadeIn(300);
+            });
+            $('.mobile_menu').stop().animate({
+                left: '-100%'
+            }, 300, function () {
+                $(this).fadeOut(300);
+            });
+        });
+    }
+    mobile_menu();    
+</script>
+<header>
+    <div class="header_wrap">
+        <div class="logo"><a href="index.html"><img src="imgs/logo.jpg" alt="로고이미지"></a></div>
+        <ul class="menu_wrap">
+            <a href="a1.html"><li>CEO인사말</li></a>
+            <a href="b1.html">
+            <li>회사소개
+            <ul class="s_menu">
+                <a href="b1.html">회사개요</a>
+                <a href="b2.html">회사연혁</a>
+                <a href="b3.html">비전과 전략</a>
+            </ul>
+            </li>
+            </a>
+            <a href="p1.html"><li>인재채용</li></a>
+            <a href="n1.html"><li>공지사항</li></a>
+             <a href="s1.html"><li>고객센터</li></a>
+            <a href="e1.html"><li>오시는 길</li></a>
+        </ul>
+    </div>
+</header>
+<div class="cont_wrap">
+  <div class="about_bg">
+      <div class="bg_wrap">
+          <h1>공지사항</h1>
+      </div>
+  </div>
+ <div class="news_wrap">
+     <div class="n_cnt">
+<!--
+     <form>
+				<input type="hidden" name="r_category" value="">
+				<input type="hidden" name="r_continent" value="">
+				<div class="cnt_search">
+					<select name="searchColumn" id="searchColumn">
+						<option value="title">제목</option>
+						<option value="contents">내용</option>
+					</select>
+					<input type="text" name="searchKeyword" placeholder="검색할 단어를 입력하세요.">
+					<input type="submit" value="검색">
+				</div>
+
+     </form>
+-->
+     
+     <table>
+						<colgroup>
+							<col style="width: 15%;">
+							<col style="width: *;">
+							<col style="width: 15%;">
+						</colgroup>
+						<tr>
+							<th>번호</th>
+							<th>제목</th>
+							<th>날짜</th>
+						</tr>
+
+							<tr>
+								<td>4</td>
+								<td>
+								<a href="#">사내 불법추심교육실시</a>
+								</td>
+								<td>2020.07.06</td>	
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>
+								<a href="#">불법채권추심 대응요령공지</a>
+								</td>
+								<td>2020.07.04</td>	
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>
+								<a href="#">2020년 사내 워크샵 실시</a>
+								</td>
+								<td>2020.03.02</td>	
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>
+								<a href="#">법정최고금리 인하에 관한 안내</a>
+								</td>
+								<td>2018.02.08</td>	
+							</tr>					
+</table>
+    
+    <div class="pagin_wrap">
+        <ul class="paging">
+           <li class="prev_arr">
+               <a href="#"><i class="fas fa-angle-left"></i></a>
+           </li>
+           <li>
+              <ul class="page_center">
+                <li><a class='active' href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+              </ul>
+           </li>
+          <li class="next_arr">
+          <a href="#"><i class="fas fa-angle-right"></i></a>
+          </li>
+        </ul>
+<!--
+                        <ul class="paging">
+							<li><a href="#" class="active">1</a></li>
+							<li><a href="#">2</a></li>
+							<li class="next_arr"><a href="javascript:;"><img src="/kor/common/img/paging_arr.png" alt=""></a></li>
+						</ul> 
+-->
+      </div>
+     
+     
+     </div>
+ </div>
+  
+</div>
+   
+<footer>
+   <div class="foot">
+    <div class="f_left">
+        <p>주소 : 서울 마포구 마포대로 20 oooooo<br>
+사업자등록번호 : 000 000 00000<br>
+감독기관명칭 : 금융감독원 (1332)</p>
+    </div>
+    <div class="f_logo"><img src="imgs/f_logo.png" alt="푸터로고"></div>
+    </div>
+</footer>
+
+
+<script>
+  
+</script>
+</body>
+</html>

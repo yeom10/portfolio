@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Nanum+Gothic|Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="portfolio_link.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+<body>
+    <div class="testimonial_section">
+        <div class="inner">
+            <h1 id="type"><!--PORTFOLIOS--></h1>
+            <div class="border">&laquo; Swipe To The Left &raquo;</div>
+            <div class="slides owl-carousel">
+                <div class="testimonial card1">
+                    <div class="card">
+                        <input type="checkbox" name="">
+                        <div class="toggle">
+                            <span></span> <span></span>
+                        </div>
+                        <img src="../01/imgs/event.jpg" alt="이벤트페이지시안">
+                        <div class="details">
+                            <h2>랜딩페이지</h2>
+                            <ul>
+                                <li>매월 진행하는 이벤트 프로모션 페이지</li>
+                                <li>PC/모바일 시안으로 작업</li>
+                            </ul>
+                        </div>
+                        <a class="link" href="../01/link/event.pdf" target="_blank">
+                            <button>CLICK TO ENTER</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="testimonial card2">
+                    <div class="card">
+                        <input type="checkbox" name="">
+                        <div class="toggle">
+                            <span></span> <span></span>
+                        </div>
+                        <img src="../01/imgs/pension.jpg" alt="펜션">
+                        <div class="details">
+                            <h2>펜션 홈페이지</h2>
+                            <ul>
+                                <li>직접 디자인 및 코딩하였습니다.</li>
+                                <li>작업시간: 10일</li>
+                            </ul>
+                        </div>
+                        <a class="link" href="../01/pension/index.html" target="_blank"> <button>CLICK TO ENTER</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="testimonial card3">
+                    <div class="card">
+                        <input type="checkbox" name="">
+                        <div class="toggle">
+                            <span></span> <span></span>
+                        </div>
+                        <img src="../01/imgs/company.jpg" alt="기업페이지">
+                        <div class="details">
+                            <h2>기업 홈페이지</h2>
+                            <ul>
+                                <li>직접 디자인 및 코딩하였습니다.</li>
+                                <li>작업시간: 5일</li>
+                            </ul>
+                        </div>
+                        <a class="link" href="../01/dy_company/index.html" target="_blank"> <button>CLICK TO
+                                ENTER</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="testimonial card4">
+                    <div class="card">
+                        <input type="checkbox" name="">
+                        <div class="toggle">
+                            <span></span> <span></span>
+                        </div>
+                        <img src="../01/imgs/banner.jpg" alt="배너">
+                        <div class="details">
+                            <h2>배너작업</h2>
+                            <ul>
+                                <li>sns 배너/패키지디자인/웹배너 등</li>
+                            </ul>
+                        </div>
+                        <a class="link" href="banner/images.html" target="_blank"> <button>CLICK TO ENTER</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="testimonial card5">
+                    <div class="card">
+                        <input type="checkbox" name="">
+                        <div class="toggle">
+                            <span></span> <span></span>
+                        </div>
+                        <img src="../01/imgs/fendi.jpg" alt="fendi">
+                        <div class="details">
+                            <h2>FENDI</h2>
+                            <ul>
+                                <li>의류잡화 쇼핑몰</li>
+                                <li>하드코딩하여 제작</li>
+                                <li>반응형 웹</li>
+                            </ul>
+                        </div>
+                        <a class="link" href="../01/fendi/fendi.html" target="_blank"> <button>CLICK TO ENTER</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var tp = 0;
+        function typing() {
+            var text = "PORTFOLIOS";
+            if (tp < text.length) {
+                document.getElementById("type").innerHTML += text.charAt(tp);
+                tp++;
+                setTimeout(typing, 200);
+            }
+        }
+        typing();
+        $('.owl-carousel').owlCarousel({
+            margin: 40,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                1200: {
+                    items: 3
+                }
+            }
+        });
+    </script>
+</body>
+</html>

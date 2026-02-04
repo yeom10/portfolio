@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+     <meta name="format-detection" content="telephone=no" />
+    <title>고객센터-나의내역조회</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    
+    
+    <style>  
+        .about_bg{width:100%;background: url(imgs/s1_bg.jpg);height: 400px;  background-repeat: no-repeat; background-size:cover; background-position:center; background-attachment: fixed;}
+        .about_bg .bg_wrap{width: 1200px; margin: auto; height: 100%; position: relative;}
+        .bg_wrap h1{position: absolute; font-size:26px; background-color: white; box-sizing: border-box; bottom:0; padding: 0 30px;height:60px; line-height: 60px;}
+        
+        .s_wrap{width:100%; display: inline-block;}
+        .s_wrap>h1{text-align: center;padding: 10vh 0 5vh 0;font-size: 2.2vw;}
+        .s_wrap>p{text-align: center; border: 1px solid #ddd;padding: 3vh 3vw;width: 1200px; margin: auto; box-sizing: border-box;margin-bottom: 5vh;}
+        
+        .s_wrap .scon_wrap{width:1200px; margin-top: 5vh;margin: auto;}
+        .scon_wrap .scon_menu{width: 100%; height: 50px;}
+        .scon_wrap .scon_menu a{display: block;}
+        .scon_wrap .scon_menu li{float: left; width: calc(100% / 2); box-sizing: border-box; border-left: 1px solid white; border-right: 1px solid white; background-color:#f4f9ff;text-align: center;font-size: 16px;font-weight: bold; height: 50px; line-height: 50px;}
+        /*form*/
+        .scon_wrap form{width:100%;display: block;}
+        .scon_wrap form .scon_form{width:100%;box-sizing: border-box;}
+        .scon_wrap form .scon_form>*{padding:5vh 20px;}
+        form .type_table{width:100%;}
+        form input{outline: none;}
+        form .type_table>li{margin: 20px 0;}
+        form .type_table>li dl{display: flex; align-items: center; justify-content:flex-start; height: 40px;}
+        form .type_table>li dl dt{width:15%;font-size: 16px; font-weight: bold; height: 100%; line-height: 40px;}
+        form .type_table>li dl dd .form-input{height: 40px; border-radius:5px; box-sizing: border-box; border: 1px solid #ddd; padding-left: 5px;font-size: 16px;}
+
+        .my_btn{width:15%;display: flex; margin: auto;}
+        .my_btn button{width:100%; font-size: 1.2vw; padding:14px 0; border: none; border-radius:30px; cursor: pointer; box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2); background-color: #3e6be8;color:white; outline: none;}
+        
+        /*form end*/
+        .btn_on{background-color:#3e6be8 !important; color: white;}
+        @media screen and (min-width:770px){
+            form .type_table>li dl dd .form-input{ min-width: 314px;}
+        }
+        @media screen and (max-width:769px){
+        .about_bg{background: url(imgs/s1_bg_m.jpg);height: 200px; background-repeat: no-repeat;  background-position:center; background-size: cover;}
+        .about_bg .bg_wrap{width: 100%;}
+        .bg_wrap h1{font-size:18px;  padding: 0 20px;height:40px; line-height:40px; }
+            
+        .s_wrap{width:90%; position: relative; transform: translateX(-50%); left: 50%;}
+        .s_wrap>h1{padding: 5vh 0; font-size:5vw;}
+        .s_wrap>p{border: 1px solid #ddd;padding: 3vh 3vw;width:100%; margin: auto;margin-bottom: 5vh; font-size: 14px; line-height: 22px;}
+        
+        .s_wrap .scon_wrap{width:100%;}
+        .scon_wrap .scon_menu{width: 100%; height: 40px;}
+        .scon_wrap .scon_menu li{font-size: 14px; height: 40px; line-height: 40px;}
+         /*form*/
+        .scon_wrap form{}
+        .scon_wrap form .scon_form{}
+        .scon_wrap form .scon_form>*{padding:3vh 0;}
+        form .type_table{}
+        form .type_table>li{margin: 20px 0; width: 100%;}
+        form .type_table>li dl{width: 100%;}
+        form .type_table>li dl dt{width:20%;font-size: 14px;height: 100%;line-height: 40px;}
+        form .type_table>li dl dd{height: 100%;width: 80%;}
+        form .type_table>li dl dd .form-select, form .type_table>li dl dd .form-input{height: 40px; font-size: 14px; width: 100%;}
+        form .type_table>li dl dd .form-select option{height:40px;}
+        form .type_table>li dl dd .input-full{display: flex; align-items: center; justify-content: center;}
+        form .type_table>li dl:last-child p{line-height: 30px;font-size: 14px;}
+        form .type_table>li dl:last-child textarea{height:150px; font-size: 14px;}
+
+        .my_btn{width:50%;}
+        .my_btn button{width:100%; font-size: 3.5vw; padding:15px 0; border-radius:30px; cursor: none;}
+        
+        /*form end*/
+        </style> 
+</head>
+<body>
+<div class="mobile_header">
+        <div class="mobile_top">
+            <div class="mobile_ham">
+                <li><i class="fas fa-bars"></i></li>
+                <li><i class="fas fa-chevron-left"></i></li>
+            </div>
+            <div class="mobile_logo">
+                <a href="index.html"><img src="imgs/logo.jpg" alt="logo"></a>
+            </div>
+        </div>
+        <div class="mobile_menu">
+            <div class="m_wrap">
+                <li class="m_menu"><a href="index.html">HOME</a></li>
+                <li class="m_menu"><a href="a1.html">CEO인사말</a></li>
+                <li class="m_menu"><a href="b1.html">회사소개</a></li>
+                <li class="m_menu"><a href="p1.html">인재채용</a></li>
+                <li class="m_menu"><a href="n1.html">공지사항</a></li>
+                <li class="m_menu"><a href="s1.html">고객센터</a></li>
+                <li class="m_menu"><a href="e1.html">오시는 길</a></li> 
+            </div>
+        </div>
+ </div>
+ <script>
+function mobile_menu() {
+        $('.mobile_ham li:first-child').click(function () {
+            $(this).fadeOut(300, function () {
+                $('.mobile_ham li:last-child').fadeIn(300);
+            });
+            $('.mobile_menu').fadeIn(300, function () {
+                $(this).stop().animate({
+                    left: 0
+                }, 300);
+            })
+        });
+        $('.mobile_ham li:last-child').click(function () {
+            $(this).fadeOut(300, function () {
+                $('.mobile_ham li:first-child').fadeIn(300);
+            });
+            $('.mobile_menu').stop().animate({
+                left: '-100%'
+            }, 300, function () {
+                $(this).fadeOut(300);
+            });
+        });
+    }
+    mobile_menu();    
+</script>
+<header>
+    <div class="header_wrap">
+        <div class="logo"><a href="index.html"><img src="imgs/logo.jpg" alt="로고이미지"></a></div>
+        <ul class="menu_wrap">
+            <a href="a1.html"><li>CEO인사말</li></a>
+            <a href="b1.html">
+            <li>회사소개
+            <ul class="s_menu">
+                <a href="b1.html">회사개요</a>
+                <a href="b2.html">회사연혁</a>
+                <a href="b3.html">비전과 전략</a>
+            </ul>
+            </li>
+            </a>
+            <a href="p1.html"><li>인재채용</li></a>
+            <a href="n1.html"><li>공지사항</li></a>
+             <a href="s1.html"><li>고객센터</li></a>
+            <a href="e1.html"><li>오시는 길</li></a>
+        </ul>
+    </div>
+</header>
+<div class="cont_wrap">
+  <div class="about_bg">
+      <div class="bg_wrap">
+          <h1>고객센터</h1>
+      </div>
+  </div>
+ <div class="s_wrap">
+ <h1>고객의 소리</h1>
+<p>고객님께서 접수하신<br><strong>고객의소리(민원)</strong>를 조회할 수 있습니다.</p>
+<div class="scon_wrap">
+    <ul class="scon_menu">
+         <a href="s1.html"><li>고객의견 접수</li></a>
+         <a href="s2.html"><li class="btn_on">나의 내역조회</li></a>
+     </ul>
+     <form action="">
+         <div class="scon_form">
+             <ul class="type_table">
+             <li>
+             <dl>
+             <dt>성명</dt>
+             <dd>
+             <input type="text" class="form-input" value="홍길동" placeholder="성명 입력">
+             </dd>
+             </dl>
+             </li>
+             <li>
+             <dl>
+             <dt>이메일</dt>
+             <dd>
+             <input type="text" class="form-input" placeholder="이메일 입력">
+             </dd>
+             </dl>
+             </li>
+<!--
+             <li>
+             <dl>
+             <dt>전화번호</dt>
+             <dd>
+             <div class="input-full">
+             <select name="mbphArNo" class="form-select" label="선택하세요">
+             <option value="">없음</option>
+             <option selected="" value="010">010</option>
+             <option value="011">011</option>
+             <option value="016">016</option>
+             <option value="017">017</option>
+             <option value="018">018</option>
+             <option value="019">019</option>
+             </select>
+             <span class="des">-</span>
+             <input type="text" class="form-input" value="" maxlength="4">
+             <span class="des">-</span>
+             <input type="text" class="form-input" value="" maxlength="4">
+             </div>
+             </dd>
+             </dl>
+             </li>
+-->
+             <li>
+             <dl>
+             <dt>비밀번호</dt>
+             <dd>
+             <input type="password" class="form-input" maxlength="4" placeholder="비밀번호 숫자 4자리 입력">
+             </dd>
+             </dl>
+             </li>
+             </ul>
+             <div class="my_btn">
+             <button class="btn">조회하기</button>
+             </div>
+         </div>
+     </form>
+</div> 
+
+  </div>
+  
+</div>
+   
+<footer>
+   <div class="foot">
+    <div class="f_left">
+        <p>주소 : 서울 마포구 마포대로 20 oooooo<br>
+사업자등록번호 : 000 000 00000<br>
+감독기관명칭 : 금융감독원 (1332)</p>
+    </div>
+    <div class="f_logo"><img src="imgs/f_logo.png" alt="푸터로고"></div>
+    </div>
+</footer>
+
+
+<script>
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+     <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>오시는 길</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    
+    
+    <style>
+        a{text-decoration: none; color: black;}
+        .company_bg{width:100%;background: url(imgs/e1_bg.jpg);height: 400px;  background-repeat: no-repeat; background-size:cover; background-position:center; background-attachment: fixed;}
+        .company_bg .bg_wrap{width:1200px; margin: auto; position: relative; height: 100%;}
+        .bg_wrap h1{position: absolute; font-size:26px; background-color: white; box-sizing: border-box; bottom: 0; padding: 0 30px;height:60px; line-height: 60px;}
+        .site_wrap{width: 1200px;margin: auto; position: relative;display: inline-block; left: 50%; transform: translateX(-50%); margin-top: 10vh;}
+        .site_wrap .map{width:50%; height: 400px; float: left;}
+        .site_wrap .site_txt{width:50%; float: left; padding-left: 2vw; box-sizing: border-box;padding-top: 2vh;}
+        .site_wrap .site_txt h3{font-size: 1.5vw;margin-bottom:2vh;}
+        .site_wrap .site_txt ul{}
+        .site_wrap .site_txt li{margin: 20px 0; font-size: 16px;}
+        .site_wrap .site_txt li svg{color: #3e6be8;}
+        @media screen and (max-width:769px){
+        .company_bg{background: url(imgs/e1_bg_m.jpg);height: 200px; background-repeat: no-repeat;  background-position:center; background-size: cover;}
+        .company_bg .bg_wrap{width: 100%;}
+        .bg_wrap h1{font-size:18px;  padding: 0 20px;height:40px; line-height:40px; }
+        
+        .site_wrap{width:90%;margin-top: 5vh;}
+        .site_wrap .map{width:100%; height: 300px; }
+        .site_wrap .site_txt{width:100%;  padding-left:0; padding-top:0;margin-top: 5vh;}
+        .site_wrap .site_txt h3{font-size:18px;margin-bottom:3vh;}
+        .site_wrap .site_txt li{margin: 10px 0; font-size: 14px;}
+        }
+    </style>
+    
+</head>
+<body>
+<div class="mobile_header">
+        <div class="mobile_top">
+            <div class="mobile_ham">
+                <li><i class="fas fa-bars"></i></li>
+                <li><i class="fas fa-chevron-left"></i></li>
+            </div>
+            <div class="mobile_logo">
+                <a href="index.html"><img src="imgs/logo.jpg" alt="logo"></a>
+            </div>
+        </div>
+        <div class="mobile_menu">
+            <div class="m_wrap">
+                <li class="m_menu"><a href="index.html">HOME</a></li>
+                <li class="m_menu"><a href="a1.html">CEO인사말</a></li>
+                <li class="m_menu"><a href="b1.html">회사소개</a></li>
+                <li class="m_menu"><a href="p1.html">인재채용</a></li>
+                <li class="m_menu"><a href="n1.html">공지사항</a></li>
+                <li class="m_menu"><a href="s1.html">고객센터</a></li>
+                <li class="m_menu"><a href="e1.html">오시는 길</a></li> 
+            </div>
+        </div>
+ </div>
+ <script>
+function mobile_menu() {
+        $('.mobile_ham li:first-child').click(function () {
+            $(this).fadeOut(300, function () {
+                $('.mobile_ham li:last-child').fadeIn(300);
+            });
+            $('.mobile_menu').fadeIn(300, function () {
+                $(this).stop().animate({
+                    left: 0
+                }, 300);
+            })
+        });
+        $('.mobile_ham li:last-child').click(function () {
+            $(this).fadeOut(300, function () {
+                $('.mobile_ham li:first-child').fadeIn(300);
+            });
+            $('.mobile_menu').stop().animate({
+                left: '-100%'
+            }, 300, function () {
+                $(this).fadeOut(300);
+            });
+        });
+    }
+    mobile_menu();    
+</script>
+<header>
+    <div class="header_wrap">
+        <div class="logo"><a href="index.html"><img src="imgs/logo.jpg" alt="로고이미지"></a></div>
+        <ul class="menu_wrap">
+            <a href="a1.html"><li>CEO인사말</li></a>
+            <a href="b1.html">
+            <li>회사소개
+            <ul class="s_menu">
+                <a href="b1.html">회사개요</a>
+                <a href="b2.html">회사연혁</a>
+                <a href="b3.html">비전과 전략</a>
+            </ul>
+            </li>
+            </a>
+            <a href="p1.html"><li>인재채용</li></a>
+            <a href="n1.html"><li>공지사항</li></a>
+             <a href="s1.html"><li>고객센터</li></a>
+            <a href="e1.html"><li>오시는 길</li></a>
+        </ul>
+    </div>
+</header>
+<div class="cont_wrap">
+  <div class="company_bg">
+     <div class="bg_wrap">
+         <h1>오시는 길</h1>
+     </div> 
+  </div>
+ <div class="site_wrap">
+   <div class="map">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.704776312!2d126.94281146564754!3d37.53845598349278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98ae46c7043f%3A0x2f1935d218e6ae9!2z64uk67O067mM65Sp!5e0!3m2!1sko!2skr!4v1597741637711!5m2!1sko!2skr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+   </div>
+   <div class="site_txt">
+       <h3>Contact Us</h3>
+       <ul>
+           <li><i class="fas fa-map-marker-alt"></i> &nbsp;(04175) 서울 마포구 마포대로 ooooo</li>
+           <li><i class="fas fa-phone"></i> &nbsp;02-000-0000</li>
+           <li><i class="fas fa-fax"></i> &nbsp;02-000-0000</li>
+           <li><i class="far fa-envelope"></i> &nbsp;email@naver.com</li>
+       </ul>
+   </div>
+    
+  </div>
+  
+</div>
+   
+<footer>
+   <div class="foot">
+    <div class="f_left">
+        <p>주소 : 서울 마포구 마포대로 20 oooooo<br>
+사업자등록번호 : 000 000 00000<br>
+감독기관명칭 : 금융감독원 (1332)</p>
+    </div>
+    <div class="f_logo"><img src="imgs/f_logo.png" alt="푸터로고"></div>
+    </div>
+</footer>
+
+
+<script>
+  
+</script>
+</body>
+</html>
