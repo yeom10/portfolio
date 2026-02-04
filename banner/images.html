@@ -43,7 +43,7 @@
       box.each(function(){
          _index=$(this).index();
             $(this).append('<img>');
-            $(this).find('img').attr('src','imgs/images'+_index+'.jpg');
+            $(this).find('img').attr('src','./banner/imgs/images'+_index+'.jpg');
             $(this).find('.title').text(title[_index]);
             $('.title').width(box_size);
             title_h=$(this).width()/5
@@ -165,4 +165,5 @@
           </div>
       </div>
 </body>
+
 </html>
